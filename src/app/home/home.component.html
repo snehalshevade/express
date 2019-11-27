@@ -1,0 +1,17 @@
+
+<button class="btn btn-success" (click)="GoToRegister()">Add New Record</button>
+
+     <div class="table-responsive">  
+    <table class="table">
+                <tr *ngFor="let emp of emps">
+                    <td>{{emp.No}}</td>
+                    <td>{{emp.Name}}</td>
+                    <td>{{emp.Age}}</td>
+                    <!-- /edit here and edit written in app.mod.ts should be same -->
+                <td><a routerLink="/edit/{{emp.No}}">Edit</a></td>
+                <td><a routerLink="/delete/{{emp.No}}">Delete</a></td>
+                </tr>
+                
+    </table>
+</div>
+
